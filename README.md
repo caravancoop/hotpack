@@ -54,6 +54,7 @@ npm run stats:prod
 - We provide some SCSS folder structure only as a guideline for your Bootstrap component customization.
 - If you don't use `Popper.js`, you can remove it in the `webpack.dev.js` and `webpack.prod.js` configuration files for a lighter build.
 - If you don't use Bootstrap's Javascript plugins at all, you can remove `import 'bootstrap';` from the `index.js` file.
+- If you don't import custom fonts, you can remove `_fonts.scss` file if you don't need it.
 
 ### Configuration files
 
@@ -66,7 +67,7 @@ npm run stats:prod
 - `.browserslistrc`
   - Help babel and autoprefixer to know which browsers are you targeting. Who wants some IE6 sweetness?
 - `style.scss`
-  - Entry point for your stylesheets. You can remove `_fonts.scss` file if you don't need it.
+  - Entry point for your stylesheets. Required imports for Bootstrap sits here.
 
 # Copyright and license
 
