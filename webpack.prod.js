@@ -60,6 +60,18 @@ module.exports = {
           },
           'image-webpack-loader'
         ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)$/,
+        include: path.resolve(__dirname, 'src/fonts'),
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            publicPath: 'fonts/',
+            outputPath: 'fonts/'
+          }
+        }
       }
     ]
   },

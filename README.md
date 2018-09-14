@@ -5,7 +5,7 @@ HotPack is a boilerplate for web developers who wants to start coding right now 
 - Bootstrap with jQuery and popper.js
 - Hashing for file name to prevent caching client side
 - Image compression
-- CSS property autoprefixing and file minification
+- CSS property autoprefixing, local font support and file minification
 - Javascript linting, old syntax transformation and file minification
 
 # Installation
@@ -65,6 +65,8 @@ npm run stats:prod
   - Force basic rulesets for your javascript development. Helps you write better and consistent code.
 - `.browserslistrc`
   - Help babel and autoprefixer to know which browsers are you targeting. Who wants some IE6 sweetness?
+- `style.scss`
+  - Entry point for your stylesheets. You can remove `_fonts.scss` file if you don't need it.
 
 # Copyright and license
 

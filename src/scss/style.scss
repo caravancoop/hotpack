@@ -11,3 +11,9 @@
 
 // bootstrap components with your custom styles
 @import 'bootstrap/import';
+
+@import 'fonts';
+
+body {
+  font-family: 'Roboto', sans-serif;
+}

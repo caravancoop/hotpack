@@ -21,6 +21,11 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/,
         include: path.resolve(__dirname, 'src/assets'),
         use: 'file-loader'
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)$/,
+        include: path.resolve(__dirname, 'src/fonts'),
+        use: 'file-loader'
       }
     ]
   },
