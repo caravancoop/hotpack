@@ -29,12 +29,6 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    extensions: ['.js'],
-    alias: {
-      jquery: 'jquery/dist/jquery.slim.min.js'
-    }
-  },
   plugins: [
     new htmlWebpackPlugin({
       template: 'index.html'

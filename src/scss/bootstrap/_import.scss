@@ -1,5 +1,8 @@
 // import here your custom bootstrap component
 @import 'components/button';
+@import 'components/tooltip';
 @import 'components/images';
 
 @import 'utilities/text';
+
+@import 'helpers/transitions';

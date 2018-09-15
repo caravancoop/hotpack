@@ -8,6 +8,12 @@ HotPack is a boilerplate for web developers who wants to start coding right now 
 - CSS property autoprefixing, local font support and file minification
 - Javascript linting, old syntax transformation and file minification
 
+# Requirements
+
+- Node
+- npm
+- libpng
+
 # Installation
 
 ```
@@ -19,7 +25,7 @@ npm install
 | Plugin       | Notes                                                       |
 | ------------ | ----------------------------------------------------------- |
 | Bootstrap    | The most popular framework for responsive websites          |
-| JQuery slim  | Bootstrap dependency, saved the frontend world 15 years ago |
+| JQuery       | Bootstrap dependency, saved the frontend world 15 years ago |
 | Popper.js    | Also Bootstrap dependency, every client asks for tooltips   |
 | ESLint       | Force javascript good practices ( production build only )   |
 | Babel        | Convert ES2015+ into old version of Javascript              |

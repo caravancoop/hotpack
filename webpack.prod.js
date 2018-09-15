@@ -75,12 +75,6 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    extensions: ['.js'],
-    alias: {
-      jquery: 'jquery/dist/jquery.slim.min.js'
-    }
-  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new htmlWebpackPlugin({
