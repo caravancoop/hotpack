@@ -17,9 +17,9 @@
   "author": "Caravan Web Worker Cooperative",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/caravancoop/sasspack/issues"
+    "url": "https://github.com/caravancoop/hotpack/issues"
   },
-  "homepage": "https://github.com/caravancoop/sasspack#readme",
+  "homepage": "https://github.com/caravancoop/hotpack#readme",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
