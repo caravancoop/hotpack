@@ -48,14 +48,14 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
-        include: path.resolve(__dirname, 'src/assets'),
+        include: path.resolve(__dirname, 'src/img'),
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[hash].[ext]',
-              publicPath: 'assets/',
-              outputPath: 'assets/'
+              publicPath: 'img/',
+              outputPath: 'img/'
             }
           },
           'image-webpack-loader'
