@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "prod": "webpack-dev-server --config webpack.prod.js",
+    "lint": "eslint src/js/index.js",
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
     "stats:prod": "webpack --config webpack.prod.js --json > stats.json"
