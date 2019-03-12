@@ -54,7 +54,6 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[hash].[ext]',
-              publicPath: 'img/',
               outputPath: 'img/'
             }
           },
@@ -68,7 +67,6 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[hash].[ext]',
-            publicPath: 'fonts/',
             outputPath: 'fonts/'
           }
         }
@@ -76,7 +74,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new htmlWebpackPlugin({
       template: 'index.html'
     }),
