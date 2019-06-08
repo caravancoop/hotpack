@@ -7,6 +7,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const BundleTracker = require('webpack-bundle-tracker');
+
 module.exports = {
   mode: 'production',
   entry: './src/js/index.js',
@@ -53,7 +56,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[hash].[ext]',
+              name: '[name].[ext]',
               outputPath: 'img/'
             }
           },
@@ -66,7 +69,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name].[hash].[ext]',
+            name: '[name].[ext]',
             outputPath: 'fonts/'
           }
         }
@@ -85,7 +88,9 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       Popper: 'popper.js'
-    })
+    }),
+    new MiniCssExtractPlugin(),
+    new BundleTracker({filename: './webpack-stats.json'})
   ],
 
   optimization: {

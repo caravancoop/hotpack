@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -30,13 +32,26 @@ module.exports = {
     ]
   },
   plugins: [
-    new htmlWebpackPlugin({
-      template: 'index.html'
-    }),
+    new CleanWebpackPlugin(['dist/*']),
+    new MiniCssExtractPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       Popper: 'popper.js'
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets',
+        to: 'assets'
+      },
+      {
+        from: 'src/fonts',
+        to: 'fonts'
+      },
+      {
+        from: 'dist',
+        to: path.resolve(__dirname, '../backend/static')
+      }
+    ])
   ]
 };

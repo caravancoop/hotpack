@@ -17,3 +17,18 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+nav {
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+  &.menu {
+    li {
+      width: 100px;
+    }
+  }
+}
