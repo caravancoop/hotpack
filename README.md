@@ -27,13 +27,13 @@ npm install
 | Bootstrap    | The most popular framework for responsive websites          |
 | JQuery       | Bootstrap dependency, saved the frontend world 15 years ago |
 | Popper.js    | Also Bootstrap dependency, every client asks for tooltips   |
-| ESLint       | Force javascript good practices ( production build only )   |
+| Standardjs   | Javascript style guide, linter & formatter                  |
 | Babel        | Convert ES2015+ into old version of Javascript              |
 | SCSS         | Gives the flexibility to work with Bootstrap components     |
 | PostCSS      | Enhance your CSS files                                      |
 | Autoprefixer | Prefix your CSS properties for old browsers                 |
 | Mini Extract | Extract your CSS files into its own                         |
-| Image Loader | Compress your images on the fly ( production build only )   |
+| Percy        | Visual review tool to avoid undesired css side effect       |
 
 ## Workflow
 

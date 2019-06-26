@@ -1,0 +1,19 @@
+extends: stylelint-config-recommended-scss
+rules:
+  no-empty-first-line: true
+  block-no-empty: true
+  declaration-block-no-duplicate-properties: true
+  color-hex-case: lower
+  color-hex-length: short
+  block-opening-brace-space-before: always
+  block-closing-brace-newline-before: always
+  max-nesting-depth: 3
+  indentation: 2
+  declaration-no-important: true
+  declaration-colon-space-before: never
+  declaration-colon-space-after: always
+  declaration-block-semicolon-newline-after: always
+  length-zero-no-unit: true
+  number-leading-zero: never
+  block-opening-brace-newline-after: always
+  selector-list-comma-newline-after: always
