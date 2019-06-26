@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -31,6 +32,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
-    new OptimizeCssAssetsPlugin()
+    new OptimizeCssAssetsPlugin(),
+    new HtmlWebpackPlugin()
   ]
 }
