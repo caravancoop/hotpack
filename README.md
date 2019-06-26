@@ -4,15 +4,13 @@ HotPack is a boilerplate for web developers who wants to start coding right now 
 
 - Bootstrap with jQuery and popper.js
 - Hashing for file name to prevent caching client side
-- Image compression
 - CSS property autoprefixing, local font support and file minification
-- Javascript linting, old syntax transformation and file minification
+- Javascript and SCSS linting, old syntax transformation and file minification
 
 # Requirements
 
 - Node
 - npm
-- libpng
 
 # Installation
 
@@ -28,10 +26,8 @@ npm install
 | JQuery       | Bootstrap dependency, saved the frontend world 15 years ago |
 | Popper.js    | Also Bootstrap dependency, every client asks for tooltips   |
 | Standardjs   | Javascript style guide, linter & formatter                  |
-| Babel        | Convert ES2015+ into old version of Javascript              |
 | SCSS         | Gives the flexibility to work with Bootstrap components     |
 | PostCSS      | Enhance your CSS files                                      |
-| Autoprefixer | Prefix your CSS properties for old browsers                 |
 | Mini Extract | Extract your CSS files into its own                         |
 | Percy        | Visual review tool to avoid undesired css side effect       |
 
@@ -49,12 +45,6 @@ npm run dev
 npm run build:prod
 ```
 
-#### Stats nerd?
-
-```
-npm run stats:prod
-```
-
 ## Helpers
 
 - We provide some SCSS folder structure only as a guideline for your Bootstrap component customization.
@@ -68,10 +58,6 @@ npm run stats:prod
   - Configuration file used for development phase. It doesn't contain backward compatibility transformation, and CSS is inline. We know developers hate slow builds.
 - `Webpack.prod.js`
   - Configuration file used for production. Does file minification, image compression, css prefixing and extraction to its own file and javascript babel transformation. Use tomorrow syntax now!
-- `.eslintrc.json`
-  - Force basic rulesets for your javascript development. Helps you write better and consistent code.
-- `.browserslistrc`
-  - Help babel and autoprefixer to know which browsers are you targeting. Who wants some IE6 sweetness?
 - `style.scss`
   - Entry point for your stylesheets. Required imports for Bootstrap sits here.
 
