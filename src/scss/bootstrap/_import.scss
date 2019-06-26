@@ -1,8 +1,9 @@
-// import here your custom bootstrap component
-@import 'components/button';
-@import 'components/tooltip';
-@import 'components/images';
+// Required
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/reboot';
 
-@import 'utilities/text';
 
-@import 'helpers/transitions';
+// Components
+@import 'buttons';

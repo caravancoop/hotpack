@@ -1,42 +1,34 @@
-const webpack = require('webpack');
-const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+// Use path to avoid operating system issues
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
-  mode: 'development',
-  devtool: 'inline-source-map',
+  devServer: {
+    // Required for Docker to find assets
+    host: '0.0.0.0',
+    // Faster requests
+    http2: true,
+    // Full screen errors displayed
+    overlay: true,
+    // Hot module replacement
+    hot: true
+  },
+  // Log and errors correct lines
+  devtool: 'cheap-module-eval-source-map',
   entry: './src/js/index.js',
   output: {
-    path: __dirname + '/dist',
-    filename: 'index.js'
+    filename: 'bundle.js'
   },
   module: {
     rules: [
       {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'src/scss'),
-        use: ['style-loader', 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/,
-        include: path.resolve(__dirname, 'src/img'),
-        use: 'file-loader'
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)$/,
-        include: path.resolve(__dirname, 'src/fonts'),
-        use: 'file-loader'
+        use: ['style-loader', 'css-loader', 'fast-sass-loader']
       }
     ]
   },
   plugins: [
-    new htmlWebpackPlugin({
-      template: 'index.html'
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      Popper: 'popper.js'
-    })
+    new webpack.HotModuleReplacementPlugin()
   ]
-};
+}
