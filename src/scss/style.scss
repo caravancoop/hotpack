@@ -1,34 +1,8 @@
-// required
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
+// in a hurry ?
 
-// bootstrap own version of normalize. It suits bootstrap rules better than normalize
-@import '~bootstrap/scss/reboot';
+// @import '~bootstrap/dist/css/bootstrap';
 
-// bootstrap grid
-@import 'node_modules/bootstrap/scss/grid';
+// else
 
-// bootstrap components with your custom styles
+@import 'vars';
 @import 'bootstrap/import';
-
-@import 'fonts';
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-nav {
-  ul {
-    padding: 0;
-  }
-  li {
-    list-style-type: none;
-    display: inline-block;
-  }
-  &.menu {
-    li {
-      width: 100px;
-    }
-  }
-}

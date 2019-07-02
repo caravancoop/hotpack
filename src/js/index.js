@@ -1,5 +1,10 @@
-import '../scss/style.scss';
-import 'bootstrap';
+import '../scss/style.scss'
 
-import { tooltips } from './tooltips';
-tooltips();
+// in a hurry ?
+
+// import 'jquery'
+// import 'popper.js'
+
+// else
+
+console.log(`let's do this !`)
