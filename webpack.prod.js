@@ -4,8 +4,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const BundleTracker = require('webpack-bundle-tracker');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const BundleTracker = require('webpack-bundle-tracker')
 
 module.exports = {
   mode: 'production',
@@ -29,6 +29,15 @@ module.exports = {
           },
           'fast-sass-loader'
         ]
+      }, {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          { loader: 'file-loader',
+            options: {
+              emitFile: false
+            }
+          }
+        ]
       }
     ]
   },
@@ -37,11 +46,11 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new OptimizeCssAssetsPlugin(),
     new HtmlWebpackPlugin(),
-    new BundleTracker({filename: './webpack-stats.json'}),
+    new BundleTracker({ filename: './webpack-stats.json' }),
     new CopyWebpackPlugin([
       {
-        from: 'src/assets',
-        to: 'assets'
+        from: 'src/img',
+        to: 'img/[name].[hash].[ext]'
       },
       {
         from: 'dist',
