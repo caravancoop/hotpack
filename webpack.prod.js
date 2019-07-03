@@ -37,7 +37,16 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new OptimizeCssAssetsPlugin(),
     new HtmlWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-    new BundleTracker({filename: './webpack-stats.json'})
+    new BundleTracker({filename: './webpack-stats.json'}),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets',
+        to: 'assets'
+      },
+      {
+        from: 'dist',
+        to: path.resolve(__dirname, '../backend/static')
+      }
+    ])
   ]
 }
