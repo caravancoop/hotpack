@@ -2,8 +2,6 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const BundleTracker = require('webpack-bundle-tracker')
 
@@ -45,8 +43,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new OptimizeCssAssetsPlugin(),
-    new HtmlWebpackPlugin(),
-    new BundleTracker({ filename: './webpack-stats.json' }),
+    new BundleTracker({ path: path.resolve(__dirname, 'dist') }),
     new CopyWebpackPlugin([
       {
         from: 'src/img',
